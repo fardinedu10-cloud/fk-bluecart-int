@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,62 +72,10 @@
             </div>
         </section>
 
-        <!-- API Demo -->
-        <section class="api-section">
-            <div class="container">
-                <p class="small-title">FETCH API</p>
-                <h2>API Operations Demo</h2>
-                <p class="api-note">
-                    These buttons demonstrate the Product and Cart API operations
-                    used in this project.
-                </p>
 
-                <div class="api-buttons">
-                    <button class="api-button" onclick="createDemoProduct()">
-                        POST Product
-                    </button>
-                    <button class="api-button" onclick="updateDemoProduct()">
-                        PUT Product
-                    </button>
-                    <button class="api-button danger-button" onclick="deleteDemoProduct()">
-                        DELETE Product
-                    </button>
-                    <button class="api-button" onclick="loadCartsFromAPI()">
-                        GET Carts
-                    </button>
-                    <button class="api-button" onclick="createDemoCart()">
-                        POST Cart
-                    </button>
-                    <button class="api-button" onclick="getCartById(1)">
-                        GET Cart #1
-                    </button>
-                    <button class="api-button" onclick="updateDemoCart()">
-                        PUT Cart #1
-                    </button>
-                    <button class="api-button danger-button" onclick="deleteDemoCart()">
-                        DELETE Cart #1
-                    </button>
-                </div>
-
-                <p id="apiStatus" class="api-status"></p>
-            </div>
-        </section>
 
         <!-- About -->
-        <section id="about" class="about-section">
-            <div class="container about-content">
-                <div>
-                    <p class="small-title">ABOUT US</p>
-                    <h2>Easy and Simple E-commerce</h2>
-                </div>
-
-                <p>
-                    BlueCart is a sister-concern of FK-Foundation 
-                </p>
-            </div>
-        </section>
     </main>
-
     <!-- Product Details Modal -->
     <div id="productModal" class="modal hidden">
         <div class="modal-content product-details-modal">
@@ -175,8 +124,7 @@
             <div>
                 <a href="#" class="logo footer-logo">BlueCart</a>
                 <p>
-                    A simple e-commerce front-end project using
-                    HTML, CSS, JavaScript and Fetch API.
+                    A sister-concern of FK-Foundation
                 </p>
             </div>
 
@@ -201,4 +149,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
