@@ -71,6 +71,47 @@
             </div>
         </section>
 
+        <!-- API Demo -->
+        <section class="api-section">
+            <div class="container">
+                <p class="small-title">FETCH API</p>
+                <h2>API Operations Demo</h2>
+                <p class="api-note">
+                    These buttons demonstrate the Product and Cart API operations
+                    used in this project.
+                </p>
+
+                <div class="api-buttons">
+                    <button class="api-button" onclick="createDemoProduct()">
+                        POST Product
+                    </button>
+                    <button class="api-button" onclick="updateDemoProduct()">
+                        PUT Product
+                    </button>
+                    <button class="api-button danger-button" onclick="deleteDemoProduct()">
+                        DELETE Product
+                    </button>
+                    <button class="api-button" onclick="loadCartsFromAPI()">
+                        GET Carts
+                    </button>
+                    <button class="api-button" onclick="createDemoCart()">
+                        POST Cart
+                    </button>
+                    <button class="api-button" onclick="getCartById(1)">
+                        GET Cart #1
+                    </button>
+                    <button class="api-button" onclick="updateDemoCart()">
+                        PUT Cart #1
+                    </button>
+                    <button class="api-button danger-button" onclick="deleteDemoCart()">
+                        DELETE Cart #1
+                    </button>
+                </div>
+
+                <p id="apiStatus" class="api-status"></p>
+            </div>
+        </section>
+
         <!-- About -->
         <section id="about" class="about-section">
             <div class="container about-content">
@@ -87,6 +128,27 @@
             </div>
         </section>
     </main>
+
+    <!-- Product Details Modal -->
+    <div id="productModal" class="modal hidden">
+        <div class="modal-content product-details-modal">
+            <div class="modal-header">
+                <h2>Product Details</h2>
+                <button id="closeProductModal" class="close-button">&times;</button>
+            </div>
+            <div id="productDetails"></div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal hidden">
+        <div class="success-content">
+            <div class="success-icon">✓</div>
+            <h2 id="successTitle">Success!</h2>
+            <p id="successMessage">Your action was completed successfully.</p>
+            <button id="closeSuccess" class="primary-button">Continue</button>
+        </div>
+    </div>
 
     <!-- Cart Modal -->
     <div id="cartModal" class="modal hidden">
