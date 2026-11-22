@@ -111,6 +111,11 @@ function displayProducts(productList) {
 
         card.className = "product-card";
 
+        // Clicking anywhere on the card opens product details.
+        card.addEventListener("click", function () {
+            getProductDetails(product.id);
+        });
+
         card.innerHTML = `
             <img
                 class="product-image"
@@ -131,21 +136,19 @@ function displayProducts(productList) {
                     $${product.price.toFixed(2)}
                 </p>
 
-                <button
-                    class="add-cart-button"
-                    onclick="addToCart(${product.id})"
-                >
+                <button class="add-cart-button">
                     Add to Cart
-                </button>
-
-                <button
-                    class="add-cart-button details-button"
-                    onclick="getProductDetails(${product.id})"
-                >
-                    View Details
                 </button>
             </div>
         `;
+
+        // Prevent the Add to Cart button from opening product details.
+        const addCartButton = card.querySelector(".add-cart-button");
+
+        addCartButton.addEventListener("click", function (event) {
+            event.stopPropagation();
+            addToCart(product.id);
+        });
 
         productContainer.appendChild(card);
     });
