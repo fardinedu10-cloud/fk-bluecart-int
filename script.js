@@ -11,6 +11,7 @@ let cart = [];
 // Product elements
 const productContainer = document.getElementById("productContainer");
 const categoryFilter = document.getElementById("categoryFilter");
+const searchInput = document.getElementById("searchInput");
 const loadingMessage = document.getElementById("loadingMessage");
 const errorMessage = document.getElementById("errorMessage");
 
@@ -155,20 +156,33 @@ function displayProducts(productList) {
 // 4. FILTER PRODUCTS
 // ========================================
 
-categoryFilter.addEventListener("change", function () {
-    const selectedCategory = this.value;
+// Filter products by category and search text
+function filterProducts() {
+    const selectedCategory = categoryFilter.value;
+    const searchText = searchInput.value.toLowerCase().trim();
 
-    if (selectedCategory === "all") {
-        displayProducts(products);
-        return;
-    }
+    const filteredProducts = products.filter(product => {
+        const matchesCategory =
+            selectedCategory === "all" ||
+            product.category === selectedCategory;
 
-    const filteredProducts = products.filter(
-        product => product.category === selectedCategory
-    );
+        const matchesSearch =
+            product.title.toLowerCase().includes(searchText) ||
+            product.category.toLowerCase().includes(searchText);
+
+        return matchesCategory && matchesSearch;
+    });
 
     displayProducts(filteredProducts);
-});
+}
+
+
+// Category filter
+categoryFilter.addEventListener("change", filterProducts);
+
+
+// Search products
+searchInput.addEventListener("input", filterProducts);
 
 
 // ========================================
