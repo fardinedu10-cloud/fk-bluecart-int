@@ -55,6 +55,23 @@ select {
     gap: 20px;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-toggle {
+    background-color: #285A48;
+    color: #B0E4CC;
+    border: 1px solid #408A71;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
 .logo {
     font-size: 1.6rem;
     font-weight: bold;
@@ -701,5 +718,209 @@ select {
 
     .api-button {
         width: 100%;
+    }
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+body.dark-theme {
+    background-color: #091413;
+    color: #B0E4CC;
+}
+
+body.dark-theme .header {
+    background-color: #091413;
+}
+
+body.dark-theme .logo {
+    color: #B0E4CC;
+}
+
+body.dark-theme .menu a {
+    color: #B0E4CC;
+}
+
+body.dark-theme .menu a:hover {
+    color: #408A71;
+}
+
+body.dark-theme .theme-toggle {
+    background-color: #408A71;
+    color: #B0E4CC;
+    border-color: #B0E4CC;
+}
+
+body.dark-theme .cart-button {
+    background-color: #285A48;
+}
+
+body.dark-theme .cart-badge {
+    background-color: #408A71;
+    color: #B0E4CC;
+}
+
+body.dark-theme .hero {
+    background: linear-gradient(135deg, #091413, #285A48);
+}
+
+body.dark-theme .hero .small-title,
+body.dark-theme .hero h1 span {
+    color: #B0E4CC;
+}
+
+body.dark-theme .hero p:not(.small-title) {
+    color: #B0E4CC;
+}
+
+body.dark-theme .hero-card {
+    background-color: #285A48;
+    color: #B0E4CC;
+}
+
+body.dark-theme .products-section {
+    background-color: #091413;
+}
+
+body.dark-theme .section-heading h2,
+body.dark-theme .about-content h2,
+body.dark-theme .product-title {
+    color: #B0E4CC;
+}
+
+body.dark-theme .search-input,
+body.dark-theme #categoryFilter {
+    background-color: #285A48;
+    color: #B0E4CC;
+    border-color: #408A71;
+}
+
+body.dark-theme .search-input::placeholder {
+    color: #B0E4CC;
+    opacity: 0.7;
+}
+
+body.dark-theme .product-card {
+    background-color: #285A48;
+    border-color: #408A71;
+}
+
+body.dark-theme .product-image {
+    background-color: #091413;
+}
+
+body.dark-theme .product-category,
+body.dark-theme .product-price {
+    color: #B0E4CC;
+}
+
+body.dark-theme .add-cart-button {
+    background-color: #408A71;
+    color: #091413;
+}
+
+body.dark-theme .add-cart-button:hover {
+    background-color: #B0E4CC;
+}
+
+body.dark-theme .message {
+    color: #B0E4CC;
+}
+
+body.dark-theme .about-section {
+    background-color: #285A48;
+}
+
+body.dark-theme .about-content p:last-child {
+    color: #B0E4CC;
+}
+
+body.dark-theme .modal {
+    background-color: rgba(9, 20, 19, 0.8);
+}
+
+body.dark-theme .modal-content,
+body.dark-theme .success-content {
+    background-color: #285A48;
+    color: #B0E4CC;
+}
+
+body.dark-theme .close-button {
+    color: #B0E4CC;
+}
+
+body.dark-theme .cart-item {
+    border-color: #408A71;
+}
+
+body.dark-theme .remove-button {
+    background-color: #408A71;
+    color: #091413;
+}
+
+body.dark-theme .details-image {
+    background-color: #091413;
+}
+
+body.dark-theme .details-category,
+body.dark-theme .details-price {
+    color: #B0E4CC;
+}
+
+body.dark-theme .details-description {
+    color: #B0E4CC;
+}
+
+body.dark-theme .details-rating {
+    background-color: #408A71;
+    color: #091413;
+}
+
+body.dark-theme .success-icon {
+    background-color: #B0E4CC;
+    color: #091413;
+}
+
+body.dark-theme .success-content p {
+    color: #B0E4CC;
+}
+
+body.dark-theme .footer {
+    background-color: #091413;
+}
+
+body.dark-theme .footer h3 {
+    color: #B0E4CC;
+}
+
+body.dark-theme .footer p,
+body.dark-theme .footer-content a:not(.logo) {
+    color: #B0E4CC;
+}
+
+body.dark-theme .copyright {
+    border-top-color: rgba(176, 228, 204, 0.3);
+}
+
+body.dark-theme .primary-button {
+    background-color: #B0E4CC;
+    color: #091413;
+}
+
+body.dark-theme .primary-button:hover {
+    background-color: #408A71;
+    color: #B0E4CC;
+}
+
+@media (max-width: 700px) {
+    .header-actions {
+        gap: 6px;
+    }
+
+    .theme-toggle,
+    .cart-button {
+        width: 44px;
+        height: 44px;
     }
 }
